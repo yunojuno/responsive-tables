@@ -42,7 +42,6 @@ $(document).ready(function() {
 
     $(original).trigger('responsivePostDraw');
 
-    console.log(copy);
     $(copy).trigger('responsivePostDraw');
     return copy;
   }
