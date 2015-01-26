@@ -5,7 +5,6 @@ $(document).ready(function() {
       switched = true;
       $("table.responsive").each(function(i, element) {
         splitTable($(element));
-          console.log('split');
         $(element).trigger('responsiveTables.postDraw');
       });
       return true;
@@ -14,7 +13,6 @@ $(document).ready(function() {
       switched = false;
       $("table.responsive").each(function(i, element) {
         unsplitTable($(element));
-          console.log('unsplit');
           $(element).trigger('responsiveTables.postDraw');
       });
     }
