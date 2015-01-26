@@ -4,8 +4,7 @@ $(document).ready(function() {
     if (($(window).width() < 767) && !switched ){
       switched = true;
       $("table.responsive").each(function(i, element) {
-        splitTable($(element));
-        $(element).trigger('responsiveTables.postDraw');
+        $(splitTable($(element))).trigger('responsiveTables.postDraw');
       });
       return true;
     }
@@ -40,6 +39,12 @@ $(document).ready(function() {
     original.wrap("<div class='scrollable' />");
 
     setCellHeights(original, copy);
+
+    $(original).trigger('responsivePostDraw');
+
+    console.log(copy);
+    $(copy).trigger('responsivePostDraw');
+    return copy;
   }
 
   function unsplitTable(original) {
