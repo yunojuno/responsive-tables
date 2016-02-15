@@ -30,9 +30,6 @@ table td, table th {
 	}
 	
 	.pinned {
-		position: absolute;
-		left: 0;
-		top: 0;
 		background: #fff;
 		width: 35%;
 		overflow: hidden;
@@ -64,11 +61,13 @@ table td, table th {
 
 	div.table-wrapper div.scrollable {
 		margin-left: 35%;
-	}
-
-	div.table-wrapper div.scrollable {
 		overflow: scroll;
 		overflow-y: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 	}	
 	
 	table.responsive td,
